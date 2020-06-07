@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		45AD8A222489594100B44B68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A212489594100B44B68 /* AppDelegate.swift */; };
 		45AD8A242489594100B44B68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A232489594100B44B68 /* SceneDelegate.swift */; };
-		45AD8A262489594100B44B68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A252489594100B44B68 /* ViewController.swift */; };
+		45AD8A262489594100B44B68 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A252489594100B44B68 /* MasterViewController.swift */; };
 		45AD8A292489594100B44B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AD8A272489594100B44B68 /* Main.storyboard */; };
 		45AD8A2B2489594700B44B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45AD8A2A2489594700B44B68 /* Assets.xcassets */; };
 		45AD8A2E2489594700B44B68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AD8A2C2489594700B44B68 /* LaunchScreen.storyboard */; };
+		45AD8A3724896B4900B44B68 /* BBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A3624896B4900B44B68 /* BBViewController.swift */; };
+		45AD8A3924896B5D00B44B68 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A3824896B5D00B44B68 /* ARViewController.swift */; };
+		45AD8A3E24898C0200B44B68 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A3D24898C0200B44B68 /* StatusViewController.swift */; };
+		45AD8A4024898D9100B44B68 /* LabelScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 45AD8A3F24898D9100B44B68 /* LabelScene.sks */; };
+		45AD8A4224898E0200B44B68 /* TemplateLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A4124898E0100B44B68 /* TemplateLabelNode.swift */; };
+		45AD8A4524898FF900B44B68 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A4424898FF900B44B68 /* Utilities.swift */; };
+		45AD8A472489914D00B44B68 /* ScuffedDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A462489914D00B44B68 /* ScuffedDetector.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		45AD8A1E2489594100B44B68 /* EffaAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffaAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AD8A212489594100B44B68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45AD8A232489594100B44B68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		45AD8A252489594100B44B68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45AD8A252489594100B44B68 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		45AD8A282489594100B44B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45AD8A2A2489594700B44B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45AD8A2D2489594700B44B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45AD8A2F2489594700B44B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45AD8A3624896B4900B44B68 /* BBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBViewController.swift; sourceTree = "<group>"; };
+		45AD8A3824896B5D00B44B68 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		45AD8A3D24898C0200B44B68 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		45AD8A3F24898D9100B44B68 /* LabelScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LabelScene.sks; sourceTree = "<group>"; };
+		45AD8A4124898E0100B44B68 /* TemplateLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateLabelNode.swift; sourceTree = "<group>"; };
+		45AD8A4424898FF900B44B68 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		45AD8A462489914D00B44B68 /* ScuffedDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ScuffedDetector.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		45AD8A202489594100B44B68 /* EffaAR */ = {
 			isa = PBXGroup;
 			children = (
+				45AD8A252489594100B44B68 /* MasterViewController.swift */,
+				45AD8A3524895B4900B44B68 /* ChildViewControllers */,
+				45AD8A4324898FEB00B44B68 /* Support */,
 				45AD8A212489594100B44B68 /* AppDelegate.swift */,
 				45AD8A232489594100B44B68 /* SceneDelegate.swift */,
-				45AD8A252489594100B44B68 /* ViewController.swift */,
 				45AD8A272489594100B44B68 /* Main.storyboard */,
 				45AD8A2A2489594700B44B68 /* Assets.xcassets */,
 				45AD8A2C2489594700B44B68 /* LaunchScreen.storyboard */,
 				45AD8A2F2489594700B44B68 /* Info.plist */,
+				45AD8A3F24898D9100B44B68 /* LabelScene.sks */,
 			);
 			path = EffaAR;
+			sourceTree = "<group>";
+		};
+		45AD8A3524895B4900B44B68 /* ChildViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45AD8A482489EBBE00B44B68 /* BBViews */,
+				45AD8A3C24898BCD00B44B68 /* ARViews */,
+			);
+			path = ChildViewControllers;
+			sourceTree = "<group>";
+		};
+		45AD8A3C24898BCD00B44B68 /* ARViews */ = {
+			isa = PBXGroup;
+			children = (
+				45AD8A4124898E0100B44B68 /* TemplateLabelNode.swift */,
+				45AD8A3824896B5D00B44B68 /* ARViewController.swift */,
+				45AD8A3D24898C0200B44B68 /* StatusViewController.swift */,
+			);
+			path = ARViews;
+			sourceTree = "<group>";
+		};
+		45AD8A4324898FEB00B44B68 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				45AD8A462489914D00B44B68 /* ScuffedDetector.mlmodel */,
+				45AD8A4424898FF900B44B68 /* Utilities.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		45AD8A482489EBBE00B44B68 /* BBViews */ = {
+			isa = PBXGroup;
+			children = (
+				45AD8A3624896B4900B44B68 /* BBViewController.swift */,
+			);
+			path = BBViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +181,7 @@
 				45AD8A2E2489594700B44B68 /* LaunchScreen.storyboard in Resources */,
 				45AD8A2B2489594700B44B68 /* Assets.xcassets in Resources */,
 				45AD8A292489594100B44B68 /* Main.storyboard in Resources */,
+				45AD8A4024898D9100B44B68 /* LabelScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45AD8A262489594100B44B68 /* ViewController.swift in Sources */,
+				45AD8A3E24898C0200B44B68 /* StatusViewController.swift in Sources */,
+				45AD8A3724896B4900B44B68 /* BBViewController.swift in Sources */,
+				45AD8A472489914D00B44B68 /* ScuffedDetector.mlmodel in Sources */,
+				45AD8A262489594100B44B68 /* MasterViewController.swift in Sources */,
 				45AD8A222489594100B44B68 /* AppDelegate.swift in Sources */,
+				45AD8A4224898E0200B44B68 /* TemplateLabelNode.swift in Sources */,
 				45AD8A242489594100B44B68 /* SceneDelegate.swift in Sources */,
+				45AD8A4524898FF900B44B68 /* Utilities.swift in Sources */,
+				45AD8A3924896B5D00B44B68 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,14 +347,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQ4GB8AK8Z;
 				INFOPLIST_FILE = EffaAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DonutRanger.EffaAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,14 +366,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQ4GB8AK8Z;
 				INFOPLIST_FILE = EffaAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DonutRanger.EffaAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
