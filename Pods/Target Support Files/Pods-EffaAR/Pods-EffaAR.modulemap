@@ -1,0 +1,6 @@
+framework module Pods_EffaAR {
+  umbrella header "Pods-EffaAR-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btp-RT-W5x">
-                                <rect key="frame" x="147" y="655" width="81" height="80"/>
+                                <rect key="frame" x="147" y="655" width="81" height="79.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="81" id="C9r-jk-gKl"/>
                                 </constraints>
@@ -71,6 +71,9 @@
                                 <state key="normal" backgroundImage="camera.circle.fill" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="capturePhoto:" destination="uNA-5H-emv" eventType="touchUpInside" id="kw1-Mb-UWJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

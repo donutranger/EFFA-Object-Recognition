@@ -12,14 +12,21 @@ import Vision
 
 class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
+    // AVFoundation
     var bufferSize: CGSize = .zero
     var rootLayer: CALayer! = nil
     @IBOutlet weak private var previewView: UIView!
-    @IBOutlet weak var cameraButton: UIButton!
-    
     private let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
     private let videoDataOutput = AVCaptureVideoDataOutput()
+    
+    // Photo Capture
+    private let photoOutput = AVCapturePhotoOutput()
+    private let sessionQueue = DispatchQueue(label: "session queue")
+    var videoDeviceInput: AVCaptureDeviceInput!
+    @IBOutlet weak var cameraButton: UIButton!
+ 
+    
     
     private let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
@@ -54,13 +61,17 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         session.beginConfiguration()
         session.sessionPreset = .high // Model image size is smaller.
         
-        // Add a video input
-        guard session.canAddInput(deviceInput) else {
+        // Add video input
+        if session.canAddInput(deviceInput) {
+            session.addInput(deviceInput)
+            self.videoDeviceInput = deviceInput
+        } else {
             print("Could not add video device input to the session")
             session.commitConfiguration()
             return
         }
-        session.addInput(deviceInput)
+       
+        // Video Output
         if session.canAddOutput(videoDataOutput) {
             session.addOutput(videoDataOutput)
             // Add a video data output
@@ -72,8 +83,21 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
             session.commitConfiguration()
             return
         }
-        let captureConnection = videoDataOutput.connection(with: .video)
+        
+        // Photo Output
+        if session.canAddOutput(photoOutput) {
+            session.addOutput(photoOutput)
+            
+            photoOutput.isHighResolutionCaptureEnabled = true
+            photoOutput.isLivePhotoCaptureEnabled = photoOutput.isLivePhotoCaptureSupported
+        } else {
+            print("Could not add photo output to the session")
+            session.commitConfiguration()
+            return
+        }
+                
         // Always process the frames
+        let captureConnection = videoDataOutput.connection(with: .video)
         captureConnection?.isEnabled = true
         do {
             try  videoDevice!.lockForConfiguration()
@@ -85,18 +109,16 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
             print(error)
         }
         session.commitConfiguration()
+            
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         rootLayer = previewView.layer
         previewLayer.frame = rootLayer.bounds
         rootLayer.addSublayer(previewLayer)
-
+        
         cameraButton.layer.zPosition = 2;
         rootLayer.zPosition = 1;
-        
-        //        previewLayer.position = CGPoint(x: self.FirstView.frame.width / 2, y: self.FirstView.frame.height / 2)
-        //        previewLayer.bounds = FirstView.frame
-        
+     
         // setup Vision parts
         setupLayers()
         updateLayerGeometry()
@@ -105,6 +127,9 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         // start the capture
         startCaptureSession()
     }
+    
+    
+    
     
     func startCaptureSession() {
         session.startRunning()
@@ -129,6 +154,26 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         } catch {
             print(error)
         }
+    }
+    
+    // ====================================================
+    // =============== Photo Capture Section ==============
+    // ====================================================
+    
+    @IBAction func capturePhoto(_ sender: UIButton) {
+        let photoSettings = AVCapturePhotoSettings()
+        photoSettings.isHighResolutionPhotoEnabled = true
+        
+        if self.videoDeviceInput.device.isFlashAvailable {
+            photoSettings.flashMode = .auto
+        }
+
+        if let firstAvailablePreviewPhotoPixelFormatTypes = photoSettings.availablePreviewPhotoPixelFormatTypes.first {
+            photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: firstAvailablePreviewPhotoPixelFormatTypes]
+        }
+        print("it works")
+
+        photoOutput.capturePhoto(with: photoSettings, delegate: self)
     }
     
     // ====================================================
@@ -287,5 +332,17 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
             exifOrientation = .up
         }
         return exifOrientation
+    }
+}
+
+extension BBViewController: AVCapturePhotoCaptureDelegate {
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+
+        guard let data = photo.fileDataRepresentation(),
+              let image =  UIImage(data: data)  else {
+                return
+        }
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
 }

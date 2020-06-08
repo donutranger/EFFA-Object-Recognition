@@ -8,6 +8,7 @@
 
 import UIKit
 import ARKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // ARKit
         guard ARWorldTrackingConfiguration.isSupported else {
             fatalError("""
             ARKit is not available on this device. For apps that require ARKit
@@ -27,6 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             determine whether to show UI for launching AR experiences.
             """) // For details, see https://developer.apple.com/documentation/arkit
         }
+        
+        // Firebase
+        FirebaseApp.configure()
+        
         return true
     }
     

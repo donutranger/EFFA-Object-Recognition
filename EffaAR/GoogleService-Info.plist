@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>266116837146-e9s0umnrq852a3msfi21lm08mjenjgqc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.266116837146-e9s0umnrq852a3msfi21lm08mjenjgqc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAKJachv-sR2YoB0ZbwwqPRcGDpNm0ccq8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>266116837146</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>DonutRanger.EffaAR</string>
+	<key>PROJECT_ID</key>
+	<string>fyp-effa</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fyp-effa.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:266116837146:ios:61686267d5f9e27a4bc6a3</string>
+	<key>DATABASE_URL</key>
+	<string>https://fyp-effa.firebaseio.com</string>
+</dict>
+</plist>
