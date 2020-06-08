@@ -21,6 +21,7 @@
 		45AD8A4524898FF900B44B68 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A4424898FF900B44B68 /* Utilities.swift */; };
 		45AD8A472489914D00B44B68 /* ScuffedDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 45AD8A462489914D00B44B68 /* ScuffedDetector.mlmodel */; };
 		45AD8A4A248E137100B44B68 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45AD8A49248E137100B44B68 /* GoogleService-Info.plist */; };
+		45B120E8248E44390030FE94 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B120E7248E44390030FE94 /* StorageService.swift */; };
 		7B8A6A2B108E7A91B1618C19 /* Pods_EffaAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B22CA4B8EF66FE3A7370D2 /* Pods_EffaAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		45AD8A4424898FF900B44B68 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		45AD8A462489914D00B44B68 /* ScuffedDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ScuffedDetector.mlmodel; sourceTree = "<group>"; };
 		45AD8A49248E137100B44B68 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45B120E7248E44390030FE94 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		A8DB2373DBDE57541F813C2C /* Pods-EffaAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffaAR.debug.xcconfig"; path = "Target Support Files/Pods-EffaAR/Pods-EffaAR.debug.xcconfig"; sourceTree = "<group>"; };
 		F2B8DB0AAEEA7CF312D170E9 /* Pods-EffaAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EffaAR.release.xcconfig"; path = "Target Support Files/Pods-EffaAR/Pods-EffaAR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				45AD8A4324898FEB00B44B68 /* Support */,
 				45AD8A212489594100B44B68 /* AppDelegate.swift */,
 				45AD8A232489594100B44B68 /* SceneDelegate.swift */,
+				45B120E6248E43F90030FE94 /* Services */,
 				45AD8A272489594100B44B68 /* Main.storyboard */,
 				45AD8A2C2489594700B44B68 /* LaunchScreen.storyboard */,
 				45AD8A2A2489594700B44B68 /* Assets.xcassets */,
@@ -128,6 +131,14 @@
 				45AD8A3624896B4900B44B68 /* BBViewController.swift */,
 			);
 			path = BBViews;
+			sourceTree = "<group>";
+		};
+		45B120E6248E43F90030FE94 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				45B120E7248E44390030FE94 /* StorageService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		5EAE17055DD34FBB424D809D /* Frameworks */ = {
@@ -269,6 +280,7 @@
 				45AD8A472489914D00B44B68 /* ScuffedDetector.mlmodel in Sources */,
 				45AD8A262489594100B44B68 /* MasterViewController.swift in Sources */,
 				45AD8A222489594100B44B68 /* AppDelegate.swift in Sources */,
+				45B120E8248E44390030FE94 /* StorageService.swift in Sources */,
 				45AD8A4224898E0200B44B68 /* TemplateLabelNode.swift in Sources */,
 				45AD8A242489594100B44B68 /* SceneDelegate.swift in Sources */,
 				45AD8A4524898FF900B44B68 /* Utilities.swift in Sources */,

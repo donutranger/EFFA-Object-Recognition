@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import Vision
+import FirebaseStorage
 
 class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
@@ -26,7 +27,8 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
     var videoDeviceInput: AVCaptureDeviceInput!
     @IBOutlet weak var cameraButton: UIButton!
  
-    
+    // Firebase
+    let storage = Storage.storage(url:"gs://training/")
     
     private let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
@@ -127,9 +129,6 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         // start the capture
         startCaptureSession()
     }
-    
-    
-    
     
     func startCaptureSession() {
         session.startRunning()
@@ -337,12 +336,30 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
 
 extension BBViewController: AVCapturePhotoCaptureDelegate {
     
+    
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-
+        let randomID = UUID.init().uuidString
+        let uploadRef = Storage.storage().reference().child("training/\(randomID).jpg")
+        let uploadMetaData = StorageMetadata.init()
+        
         guard let data = photo.fileDataRepresentation(),
               let image =  UIImage(data: data)  else {
                 return
         }
+        
+        guard let imageData = image.jpegData(compressionQuality: 1.0) else { return }
+        
+        // Save captured photo to Photo Library
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+        // Upload captured photo to Firebase
+        uploadMetaData.contentType = "image/jpg"
+        uploadRef.putData(imageData, metadata: uploadMetaData) {
+            (downloadMetaData, error) in
+            if let error = error {
+                print("Something went wrong. \(error.localizedDescription)")
+            }
+            print("Upload complete. Info: \(String(describing: downloadMetaData))")
+        }
     }
 }
