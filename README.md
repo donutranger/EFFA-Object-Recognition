@@ -6,13 +6,12 @@ All rights reserved.
 ## Example:
 Bounding Box
 <br>
-![BBView](BBView.jpeg | width)
-<img src="BBView.jpeg" alt="BBView" width="50"></a>
+<img src="BBView.jpeg" alt="BBView" width="150"></a>
 
 
 Augmented Reality
 <br>
-![ARView](ARView.jpeg)
+<img src="ARView.jpeg" alt="ARView" width="150"></a>
 
 ## Requirements:
 - Apple Mac Computer
