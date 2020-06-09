@@ -6,7 +6,9 @@ All rights reserved.
 ## Example:
 Bounding Box
 <br>
-![BBView](BBView.jpeg)
+![BBView](BBView.jpeg | width)
+<img src="BBView.jpeg" alt="BBView" width="50"></a>
+
 
 Augmented Reality
 <br>
