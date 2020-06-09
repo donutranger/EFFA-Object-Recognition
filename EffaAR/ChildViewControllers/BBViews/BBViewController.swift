@@ -293,13 +293,13 @@ class BBViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
         shapeLayer.bounds = bounds
         shapeLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
         shapeLayer.name = "Found Object"
-        if (confidence > 0.3) {
+        if (confidence > 0.5) {
             switch identifier {
-            case "notFresh-eyes":
+            case "notFresh-eyes", "notFresh-body", "notFresh-skin":
                 shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 0.2, 0.4])
-            case "fresh-eyes":
+            case "fresh-eyes", "fresh-body", "fresh-skin":
                 shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0.41, 0.76, 0.05, 0.4])
-            case "rot-eyes":
+            case "rot-eyes", "rot-body", "rot-skin":
                 shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 0.0, 0.0, 0.4])
             default:
                 shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 0.0, 0.0, 0.4])
