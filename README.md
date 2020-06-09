@@ -5,10 +5,10 @@ All rights reserved.
 
 ## Example:
 Bounding Box
-![BBView](https://github.com/DonutRanger/fyp-effa-ios/BBView.jpeg)
+![BBView](BBView.jpeg)
 
 Augmented Reality
-![ARView](https://github.com/DonutRanger/fyp-effa-ios/ARView.jpeg)
+![ARView](ARView.jpeg)
 
 ## Requirements:
 - Apple Mac Computer
