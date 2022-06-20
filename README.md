@@ -3,7 +3,7 @@
 
 # EFFA - Eat Fresh Fish App
 A university final year project.
-An intelligent camera app to check for fish's freshness using YOLOv3. Provides boundix box and augmented reality feature.
+An intelligent camera app to check for fish's freshness. Results of the ML vision can be seen using the bounding box and augmented reality tab switching feature.
 
 This app makes use of augmented reality and object detection + image recognition using Apple's ARKIT and Vision library.
 
